@@ -1,0 +1,32 @@
+VOOR DAT JE DE FILES AANPAST ALTIJD
+     git pull
+
+Dan pas je de files aan die je wilt, je bent klaar met je files aan te passen en WILT ZE ONLINE/naar 
+de publiek repo brengen:
+    git add *
+OF  git add <files>
+
+dan doe je (altijd)
+
+       git pull
+
+Deze gaat OFWEL de changes van de remote gewoon binnen trekken zonder problemen
+OFWEL gaat het mis en zegt hij: must commit or stash
+
+dan doe je
+        git stash save
+doe je opnieuw de pull want die was daarnet mislukt
+        git pull
+Dan ga je manueel de veranderingen van jou terug boven op de veranderingen van de server leggen:
+        git stash pop
+        git mergetool <= voor de merge te kunnen oplossen
+
+Als je de merge succesvol hebt opgelost
+       git add . (voor de zekerheid)
+       git pull (voor de zekerheid dat er niet nog een verandering is gebeurt op de server)
+       
+        git commit -m "Mijn commit message"
+        git push (voor het online te brengen)
+
+Moest je nog vragen hebben, contacteer Giel Smets
+
